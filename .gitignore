@@ -1,0 +1,23 @@
+# Secrets
+.env
+.env.*
+!.env.exemple
+
+# Données
+raw/
+cache/
+*.csv
+*.parquet
+*.xlsx
+*.zip
+
+# Python
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+.pytest_cache/
+
+# Power BI
+*.pbix
+.pbi/localSettings.json
+.pbi/cache.abf
