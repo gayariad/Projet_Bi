@@ -96,7 +96,7 @@ def preparation_provisoire(t):
     mois = pd.to_numeric(car["mois"], errors="coerce")
     an = pd.to_numeric(car["an"], errors="coerce")
     dates = pd.to_datetime(pd.DataFrame({"year": an, "month": mois, "day": jour}), errors="coerce")
-    car["jour_semaine"] = dates.dt.dayofweek.astype("Int64").astype("string")
+    car["jour_semaine"] = dates.dt.day_of_week.astype("Int64").astype("string")
     car["mois"] = mois.astype("Int64").astype("string")
     car["heure"] = pd.to_numeric(car["hrmn"].astype("string").str.split(":").str[0], errors="coerce")
 
