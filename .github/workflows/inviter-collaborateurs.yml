@@ -1,0 +1,24 @@
+name: Inviter les collaborateurs depuis le Sheet
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # toutes les 15 minutes
+  workflow_dispatch:          # bouton « Run workflow » pour lancer à la main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: inviter-collaborateurs
+  cancel-in-progress: false
+
+jobs:
+  inviter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inviter les nouveaux pseudos
+        env:
+          INVITE_TOKEN: ${{ secrets.INVITE_TOKEN }}
+          SHEET_ID: 1ZRQblhE7YOOmVnOc1K9aKKki7qdXTCPFhTrOBSjjUGM
+        run: python3 .github/scripts/inviter_depuis_sheet.py
