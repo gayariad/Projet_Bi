@@ -54,6 +54,8 @@ def normaliser_marqueurs(df: pd.DataFrame) -> pd.DataFrame:
 
 def appliquer_codes(df: pd.DataFrame, famille: str, ref: pd.DataFrame) -> pd.DataFrame:
     regles = ref[(ref["famille"] == famille) & (ref["action"] == "NA")]
+    if "statut" in regles.columns:
+        regles = regles[regles["statut"].isin(["valide_reunion", "valide_onisr"])]
 
     for regle in regles.itertuples():
         if regle.variable not in df.columns:
@@ -65,7 +67,18 @@ def appliquer_codes(df: pd.DataFrame, famille: str, ref: pd.DataFrame) -> pd.Dat
 
         if "annee" in df.columns:
             annee = pd.to_numeric(df["annee"], errors="coerce")
+        elif famille == "caracteristiques" and "an" in df.columns:
+            annee = pd.to_numeric(df["an"], errors="coerce")
+        else:
+            annee = None
+
+        if annee is not None:
             masque &= annee.between(regle.annee_min, regle.annee_max).fillna(False)
+        elif not (regle.annee_min <= 2019 and regle.annee_max >= 2024):
+            raise ValueError(
+                f"Annee absente pour {famille}.{regle.variable} : "
+                "impossible de respecter la periode"
+            )
 
         df[regle.variable] = df[regle.variable].mask(masque, pd.NA)
 
