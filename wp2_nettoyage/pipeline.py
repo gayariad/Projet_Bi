@@ -12,6 +12,7 @@ ORDRE = [
     "e110_harmonisation",
     "e115_typage",
     "e120_valeurs_manquantes",
+    "e150_lieu_principal",
 ]
 
 

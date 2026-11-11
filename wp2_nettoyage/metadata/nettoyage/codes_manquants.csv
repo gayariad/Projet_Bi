@@ -1,0 +1,47 @@
+famille;variable;code;annee_min;annee_max;signification;action;statut
+caracteristiques;lum;-1;2019;2024;Non renseigne;NA;valide_reunion
+caracteristiques;int;-1;2019;2024;Non renseigne;NA;valide_reunion
+caracteristiques;atm;-1;2019;2024;Non renseigne;NA;valide_reunion
+caracteristiques;col;-1;2019;2024;Non renseigne;NA;valide_reunion
+lieux;circ;-1;2019;2024;Non renseigne;NA;valide_reunion
+lieux;nbv;-1;2019;2024;Non renseigne;NA;valide_reunion
+lieux;vosp;-1;2019;2024;Non renseigne;NA;valide_reunion
+lieux;prof;-1;2019;2024;Non renseigne;NA;valide_reunion
+lieux;plan;-1;2019;2024;Non renseigne;NA;valide_reunion
+lieux;surf;-1;2019;2024;Non renseigne;NA;valide_reunion
+lieux;infra;-1;2019;2024;Non renseigne;NA;valide_reunion
+lieux;situ;-1;2019;2024;Non renseigne;NA;valide_reunion
+lieux;vma;-1;2019;2024;Non renseigne;NA;valide_reunion
+lieux;larrout;-1;2019;2024;Non renseigne;NA;valide_reunion
+usagers;place;-1;2019;2024;Non renseigne;NA;valide_reunion
+usagers;grav;-1;2019;2024;Non renseigne;NA;valide_reunion
+usagers;sexe;-1;2019;2024;Non renseigne;NA;valide_reunion
+usagers;trajet;-1;2019;2024;Non renseigne;NA;valide_reunion
+usagers;secu1;-1;2019;2024;Non renseigne;NA;valide_reunion
+usagers;secu2;-1;2019;2024;Non renseigne;NA;valide_reunion
+usagers;secu3;-1;2019;2024;Non renseigne;NA;valide_reunion
+usagers;locp;-1;2019;2024;Non renseigne;NA;valide_reunion
+usagers;actp;-1;2019;2024;Non renseigne;NA;valide_reunion
+usagers;etatp;-1;2019;2024;Non renseigne;NA;valide_reunion
+vehicules;senc;-1;2019;2024;Non renseigne;NA;valide_reunion
+vehicules;catv;-1;2019;2024;Non renseigne;NA;valide_reunion
+vehicules;obs;-1;2019;2024;Non renseigne;NA;valide_reunion
+vehicules;obsm;-1;2019;2024;Non renseigne;NA;valide_reunion
+vehicules;choc;-1;2019;2024;Non renseigne;NA;valide_reunion
+vehicules;manv;-1;2019;2024;Non renseigne;NA;valide_reunion
+vehicules;motor;-1;2019;2024;Non renseigne;NA;valide_reunion
+usagers;trajet;0;2019;2024;Non renseigne;NA;a_confirmer_onisr
+vehicules;senc;0;2019;2024;Inconnu;NA;a_confirmer_onisr
+vehicules;manv;0;2019;2024;Inconnue;NA;a_confirmer_onisr
+vehicules;motor;0;2019;2024;Inconnue;NA;a_confirmer_onisr
+vehicules;catv;0;2019;2024;Indeterminable;NA;a_confirmer_onisr
+usagers;actp;0;2019;2024;Non renseigne ou sans objet (ambigu);CONSERVER;a_confirmer_onisr
+lieux;infra;0;2019;2024;Aucun;CONSERVER;valide_reunion
+lieux;vosp;0;2019;2024;Sans objet;CONSERVER;valide_reunion
+usagers;locp;0;2019;2024;Sans objet;CONSERVER;valide_reunion
+usagers;secu1;0;2019;2024;Aucun equipement;CONSERVER;valide_reunion
+usagers;secu2;0;2019;2024;Aucun equipement;CONSERVER;valide_reunion
+usagers;secu3;0;2019;2024;Aucun equipement;CONSERVER;valide_reunion
+vehicules;choc;0;2019;2024;Aucun;CONSERVER;valide_reunion
+vehicules;obs;0;2019;2024;Sans objet;CONSERVER;valide_reunion
+vehicules;obsm;0;2019;2024;Aucun;CONSERVER;valide_reunion
