@@ -52,6 +52,7 @@ def test_nettoyage_codes():
     assert pd.isna(resultat["v2"].iloc[2])
 
 
+@pytest.mark.integration
 def test_pipeline_v1_reel():
     t = donnees_propres()
 
