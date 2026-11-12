@@ -23,9 +23,9 @@ def appliquer(t: dict) -> dict:
         df = t["lieux"].copy()
         vma = pd.to_numeric(df["vma"], errors="coerce")
 
-        # Seuil provisoire : a confirmer avec Melissandre.
+        # dans la réglementation la vma min est 20 mais peux être réduite par la maire a 10 dans certaines zones
         df["vma_suspecte"] = (
-            (vma < 0) | (vma > 130)
+            (vma < 10) | (vma > 130)
         ).fillna(False)
 
         resultat["lieux"] = df
