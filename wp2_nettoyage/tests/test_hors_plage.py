@@ -26,7 +26,7 @@ def test_coordonnees_suspectes():
 
 
 def test_vma_suspecte():
-    """verifie les vitesse hors intervalle [0, 130]."""
+    """verifie les vitesse hors intervalle [10, 130]."""
     df_lieux = pd.DataFrame(
         {"vma": [50, 130, 0, -10, 140, "texte_invalide"]}
     )
@@ -36,11 +36,11 @@ def test_vma_suspecte():
 
     # 50 -> Valide (False)
     # 130 -> Valide (False)
-    # 0 -> Valide (False)
+    # 0 -> invalide (True)
     # -10 -> Negatif (True)
     # 140 -> Superieur à 130 (True)
     # Non numerique -> NaN (False)
-    attendu = [False, False, False, True, True, False]
+    attendu = [False, False, True, True, True, False]
     assert df_res["vma_suspecte"].tolist() == attendu
 
 
