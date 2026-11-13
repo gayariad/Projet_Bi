@@ -1,140 +1,132 @@
-# WP2 — Préparation & Qualité des Données BAAC (2019–2024)
+﻿# WP2 - Preparation et qualite des donnees BAAC (2019-2024)
 
-Ce dossier contient l'intégralité du pipeline de données, des scripts d'harmonisation, des contrôles de qualité, de la batterie de tests et des métadonnées du **Work Package 2 (WP2)** pour le projet d'analyse décisionnelle des accidents corporels de la circulation en France.
+## 1. Objectif
 
----
+Le WP2 prepare et controle les donnees BAAC 2019-2024 pour leur exploitation par les autres Work Packages, notamment le WP3.
 
-## 🏗️ Structure du Répertoire `wp2_nettoyage`
+Le pipeline charge les tables depuis la source de donnees du projet, applique les regles de nettoyage validees et retourne quatre DataFrames pandas.
 
-```text
-wp2_nettoyage/
-├── README.md                          --> Ce guide principal
-├── pipeline.py                        --> Script maître d'exécution du pipeline
-├── documentation/                     --> Documents de cadrage, limites et contrats d'interface
-│   ├── note_cadrage_wp2.md
-│   ├── rapport_technique_wp2.md
-│   ├── contrat_interface_wp2_wp3.md
-│   └── limites_et_versions_baac.md
-├── metadata/                          --> Registres, profilage et métadonnées
-│   ├── codifications/                 --> Dictionnaire (64 variables) et modalites
-│   │   ├── dictionnaire_baac_complet.csv
-│   │   └── modalites_baac_finalisees.csv
-│   ├── nettoyage/                     --> Registre officiel des règles (R001–R008)
-│   │   └── registre_regles.csv
-│   ├── profilage/                     --> Rapports d'incomplétude, doublons et valeurs spéciales
-│   └── qualite/                       --> Bilans des tests et contrôles métiers
-├── scripts/ & etapes/                 --> Scripts Python d'automatisation
-└── tests/                             --> Suite de tests automatisés (unitaires & intégration)
-```
+Il n'est pas necessaire de relancer les anciens scripts de telechargement pour utiliser ce pipeline.
 
----
+## 2. Prerequis
 
-## 🚀 Exécution du Pipeline
+- Python et les dependances du projet
+- Acces a la base PostgreSQL configuree pour le projet
+- Execution depuis la racine du depot Projet_Bi
 
-### Préréquis
-Assurez-vous d'avoir Python 3.10+ installé ainsi que les dépendances nécessaires :
+Installer les dependances :
+
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
-### Option A : Exécution globale via le Pipeline Master
-Pour exécuter l'ensemble de la chaîne de traitement (téléchargement, harmonisation, profilage et génération des métadonnées) :
-```bash
-python -c 'from wp2_nettoyage.pipeline import donnees_propres; print({k: len(v) for k, v in donnees_propres().items()})'
-```
+La connexion aux donnees est assuree par `commun.recuperer_donnees.charger_tout()`. La configuration de cette connexion doit etre operationnelle avant l'execution.
 
-### Option B : Exécution étape par étape
-Les étapes principales peuvent être lancées séparément :
-1. **Téléchargement des sources RAW (2019–2024)** :
-   ```bash
-   python scripts/wp2_download_baac_corrige.py
-   ```
-2. **Harmonisation Silver** :
-   ```bash
-   python scripts/harmoniser_baac.py
-   ```
-3. **Profilage et génération des métadonnées** :
-   ```bash
-   python scripts/profiler_baac.py
-   ```
-4. **Préparation du plan de nettoyage** :
-   ```bash
-   python scripts/preparer_regles_nettoyage_wp2.py
-   ```
-
----
-
-## 🧪 Lancement des Tests & Contrôles Qualité
-
-Avant toute livraison aux équipes consommatrices (WP3), l'ensemble de la suite de contrôles doit être validé sans erreur.
-
-### 1. Contrôles de structure & d'intégration (12 tests)
-```bash
-python scripts/tester_qualite_avant_nettoyage.py
-```
-
-### 2. Contrôles métiers & cohérence calendaire (58 contrôles)
-```bash
-python scripts/controle_metier_avant_nettoyage.py
-```
-
-### 3. Exécution via Pytest
-```bash
-python -m pytest wp2_nettoyage/tests/ -q
-```
-
----
-
-## 📋 Règles de Nettoyage Validées (`propre_v2`)
-
-Les règles validées lors des arbitrages inter-équipes pour la version `propre_v2` sont consignées dans `metadata/nettoyage/registre_regles.csv` :
-* **R001** : Renommage d'`Accident_Id` (2022) en `Num_Acc`.
-* **R002** : Conservation de `id_usager` vide pour 2019–2020 sans invention de faux identifiants.
-* **R003** : Conversion des `-1` de `larrout` en `NA` (information non renseignée).
-* **R004** : Normalisation des marqueurs d'absence hétérogènes de `v2` en `pd.NA`.
-* **R005** : Conservation de `lartpc` (99,84% de vides) avec documentation de son taux d'incomplétude.
-* **R006** : Distinction "sans objet" / `NA` sur `occutc` selon la catégorie de véhicule (`catv`).
-* **R007** : Conservation des 164 doublons usagers ambigus avec ajout d'une colonne booléenne `doublon_suspect` (299 lignes signalées).
-* **R008** : Maintien de la cardinalité multiple sur `Num_Acc` dans la table `lieux` (2023–2024).
-
----
-
-## 📊 Accès aux Données & Livrables
-
-1. **Données Consolidées (Locales / GitHub LFS)** :
-   * Zone Silver : `data/silver/` (4 fichiers CSV, ~1,99 million de lignes).
-2. **Base de Données PostgreSQL / Neon** :
-3. **Dictionnaire de Données** :
-   * Consulter `metadata/codifications/dictionnaire_baac_complet.csv` ou le document `documentation/contrat_interface_wp2_wp3.md`.
-
----
-
-## 👥 Contacts & Responsabilités WP2
-
-* **Pilotage & Coordination** : Mohamed Reda Lahmar
-* **Documentation & Dictionnaire** : Lucas Edouard / Febbe Kiazi Tsaka Ngoma
-* **Dépôt GitHub** : [gayariad/Projet_Bi](https://github.com/gayariad/Projet_Bi)
-## Interface reelle et precisions de livraison
+## 3. Executer le pipeline
 
 Depuis la racine du depot :
 
-    from wp2_nettoyage.pipeline import donnees_propres
-    tables = donnees_propres()
+```python
+from wp2_nettoyage.pipeline import donnees_propres
 
-La fonction retourne quatre DataFrames pandas :
-caracteristiques, lieux, usagers et vehicules.
+tables = donnees_propres()
 
-Tests :
+for nom, df in tables.items():
+    print(nom, len(df))
+```
 
-    py -m pytest wp2_nettoyage/tests/ -q
+Sur Windows, pour lancer directement cet exemple dans PowerShell :
 
-R006 : occutc est conservee. Son interpretation depend
-de catv afin de distinguer les cas sans objet des valeurs
-non renseignees. Aucune imputation automatique.
+```powershell
+py -c "from wp2_nettoyage.pipeline import donnees_propres; print({k: len(v) for k, v in donnees_propres().items()})"
+```
 
-R008 : toutes les lignes de lieux sont conservees.
-lieu_principal identifie exactement une ligne de reference
-par accident, sans supprimer les autres lignes.
+La fonction retourne un dictionnaire contenant :
 
-La version propre_v2 reste candidate jusqu'a validation
-finale et fusion dans main.
+- `caracteristiques`
+- `lieux`
+- `usagers`
+- `vehicules`
+
+Ces tables sont des DataFrames pandas. La fonction n'exporte pas automatiquement de nouveaux fichiers CSV.
+
+## 4. Etapes du nettoyage
+
+L'ordre des transformations est defini dans `wp2_nettoyage/pipeline.py`.
+
+| Etape | Traitement |
+| --- | --- |
+| e100 | Etape d'exemple, sans transformation |
+| e110 | Harmonisation des donnees |
+| e115 | Typage des colonnes |
+| e120 | Traitement des codes de valeurs manquantes selon le referentiel |
+| e125 | Signalement des valeurs hors plage |
+| e130 | Indicateur metropole |
+| e140 | Identification des doublons suspects |
+| e150 | Identification du lieu principal par accident |
+
+Les lignes ne sont pas supprimees automatiquement pour les anomalies signalees par les indicateurs de qualite.
+
+## 5. Tests
+
+Depuis la racine du depot :
+
+```powershell
+py -m pytest wp2_nettoyage/tests/ -q
+```
+
+Derniere validation technique avant livraison :
+34 tests reussis.
+
+Cette validation technique ne remplace pas la revue et l'approbation de la Pull Request.
+
+## 6. Regles et points de vigilance
+
+Les decisions de nettoyage sont decrites dans :
+
+- `wp2_nettoyage/metadata/nettoyage/registre_regles.csv`
+- `wp2_nettoyage/metadata/nettoyage/codes_manquants.csv`
+
+Principaux points d'attention :
+
+- `occutc` est conserve sans imputation automatique ; son interpretation depend notamment de `catv`.
+- `doublon_suspect` permet de reperer les lignes d'usagers suspectes sans les supprimer.
+- La table `lieux` conserve sa cardinalite d'origine.
+- `lieu_principal` identifie une ligne de reference par accident.
+- Pour `pr` et `pr1`, le marqueur `(1)` des annees 2019-2022 est normalise selon les regles du pipeline.
+
+Certaines modalites ONISR necessitent encore une confirmation documentaire :
+
+- `v1 = -1` : interpretation a confirmer.
+- `nbv = 0` : interpretation a confirmer.
+- `actp = 7/8` : correspondance avec les definitions historiques a confirmer.
+
+Ces valeurs sont conservees lorsqu'aucune transformation n'est suffisamment justifiee. Les WP consommateurs doivent tenir compte de ces reserves dans leurs indicateurs.
+
+## 7. Interface avec les autres WP
+
+Le contrat d'interface est disponible dans :
+
+`wp2_nettoyage/documentation/contrat_interface_wp2_wp3.md`
+
+Pour une analyse necessitant exactement un lieu par accident, utiliser la colonne `lieu_principal` de la table `lieux`.
+
+Ne pas supposer que toutes les tables ont une seule ligne par `num_acc`.
+
+## 8. Documentation
+
+- `documentation/` : cadrage, rapport technique, limites et contrat WP2-WP3
+- `metadata/codifications/` : dictionnaire et modalites BAAC
+- `metadata/nettoyage/` : regles de nettoyage
+- `tests/` : tests automatises
+- `etapes/` : transformations du pipeline
+
+Les chemins ci-dessus sont relatifs au dossier `wp2_nettoyage/`.
+
+## 9. Etat de livraison
+
+La version `propre_v2` a passe la validation technique avec 34 tests reussis.
+
+Elle reste une version candidate jusqu'a l'approbation et la fusion de la Pull Request dans `main`.
+
+Depot : https://github.com/gayariad/Projet_Bi
