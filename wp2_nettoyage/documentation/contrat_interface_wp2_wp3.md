@@ -1,7 +1,7 @@
 # Contrat d'interface provisoire WP2 vers WP3
 
-**Version :** 0.1
-**Date :** 01/11/2026
+**Version :** 0.3
+**Date :** 13/11/2026
 **Statut :** PROPOSITION - non encore acceptee par WP3
 
 ## 1. Objet
@@ -9,67 +9,66 @@
 Definir les donnees, formats, cles et limites transmis
 par WP2 a WP3 pour integration dans la zone decisionnelle.
 
-## 2. Jeux de donnees fournis
+## 2. Interface de livraison
 
-| Fichier | Grain principal | Lignes |
+WP2 fournit la fonction Python :
+
+`from wp2_nettoyage.pipeline import donnees_propres`
+`tables = donnees_propres()`
+
+Elle retourne quatre DataFrames pandas :
+
+| Table | Grain | Lignes |
 |---|---|---:|
-| caracteristiques_2019_2024.csv | Accident | 327 628 |
-| lieux_2019_2024.csv | Enregistrement de lieu | 359 512 |
-| vehicules_2019_2024.csv | Vehicule d'un accident | 559 847 |
-| usagers_2019_2024.csv | Enregistrement d'usager | 745 158 |
+| caracteristiques | Accident | 327 628 |
+| lieux | Enregistrement de lieu | 359 512 |
+| vehicules | Vehicule | 559 847 |
+| usagers | Enregistrement d'usager | 745 158 |
 
-Chemin relatif : data/silver/
+## 3. Formats et types
 
-## 3. Format actuel propose
-
-- Format : CSV.
-- Separateur : point-virgule.
-- Encodage : UTF-8 avec BOM.
-- Premiere ligne : noms des colonnes.
-- Periode : 2019 a 2024.
-- Colonne technique : annee.
-- Lecture initiale recommandee : toutes les colonnes
-  sous forme de texte pour preserver les codes et identifiants.
-- Conversion vers des types cibles selon les variables
-  et les regles validees par WP3.
-
-Ces conventions representent le format actuel des exports.
-L'acceptation formelle de WP3 reste necessaire.
+- Donnees BAAC 2019-2024.
+- Identifiant accident : num_acc.
+- Typage pandas applique par e115_typage.
+- Dates et heures construites dans caracteristiques.
+- Valeurs absentes normalisees en pd.NA.
+- Aucun export CSV final n'est impose par ce contrat.
+- Les formats de stockage cibles restent a confirmer avec WP3.
 
 ## 4. Cles et cardinalites
 
 ### Caracteristiques vers vehicules
 
-- Cle accident : Num_Acc.
+- Cle accident : num_acc.
 - Relation observee : un accident vers plusieurs vehicules.
-- Cle unique des vehicules : (Num_Acc, id_vehicule).
+- Cle unique des vehicules : (num_acc, id_vehicule).
 
 ### Caracteristiques vers usagers
 
-- Cle accident : Num_Acc.
+- Cle accident : num_acc.
 - Plusieurs usagers peuvent appartenir au meme accident.
 - id_usager n'est pas disponible dans les sources 2019-2020.
 
 ### Caracteristiques vers lieux
 
-- Cle accident : Num_Acc.
+- Cle accident : num_acc.
 - Les donnees 2023 et 2024 peuvent contenir
   plusieurs lignes de lieux pour un accident.
-- Ne pas imposer de contrainte UNIQUE sur lieux.Num_Acc.
+- Ne pas imposer de contrainte UNIQUE sur lieux.num_acc.
 
 ### Vehicules vers usagers
 
 - Jointure recommandee :
-  vehicules.Num_Acc = usagers.Num_Acc
+  vehicules.num_acc = usagers.num_acc
   ET vehicules.id_vehicule = usagers.id_vehicule.
 
 ## 5. Regles de jointure
 
 Attention : joindre simultanement lieux, vehicules
-et usagers sur Num_Acc seul peut multiplier les lignes.
+et usagers sur num_acc seul peut multiplier les lignes.
 
 Pour calculer le nombre d'accidents :
-COUNT(DISTINCT Num_Acc), au bon niveau de granularite.
+COUNT(DISTINCT num_acc), au bon niveau de granularite.
 
 Pour les statistiques usagers :
 travailler au niveau des enregistrements usagers,
@@ -80,34 +79,39 @@ utiliser la cle composite accident-vehicule.
 
 La strategie de modelisation finale revient a WP3.
 
-## 6. Transformations deja appliquees
+## 6. Transformations appliquees
 
-- Accident_Id renomme Num_Acc pour caracteristiques 2022.
-- id_usager ajoute vide pour 2019-2020.
-- lat/long harmonises avec point decimal.
-- Colonne annee ajoutee.
-- Aucun retrait de lignes.
+Le pipeline applique dans cet ordre :
+
+e100, e110, e115, e120, e125, e130, e140, e150.
+
+- Harmonisation, typage, dates et heures.
+- Traitement des valeurs manquantes selon les regles ONISR validees.
+- Signalement des valeurs hors plage, sans suppression.
+- caracteristiques.metropole : indicateur geographique.
+- caracteristiques.coordonnees_suspectes : controle geographique.
+- lieux.vma_suspecte : controle de vitesse, seuil provisoire 10-130.
+- lieux.lieu_principal : exactement un lieu principal par accident.
+- usagers.doublon_suspect : signalement sans suppression.
 
 ## 7. Restrictions et limites
 
-- Tables harmonisees mais non nettoyees.
-- 164 doublons exacts supplementaires dans
-  les usagers 2019-2020, conserves.
-- Multiplicite de lieux en 2023-2024.
-- Valeurs speciales variables selon les colonnes.
-- Certaines codifications necessitent encore validation.
-- Pas de garantie de qualite metier exhaustive.
+- Les 1 992 145 lignes sont conservees.
+- Les doublons d'usagers historiques restent presents.
+- Les lignes multiples de lieux sont conservees.
+- R006 est validee : occutc est conservee sans imputation automatique.
+- L'interpretation de occutc selon catv doit etre prise en compte par WP3.
+- Certaines modalites ONISR restent a confirmer.
+- Le seuil VMA reste un critere provisoire de signalement.
+- La qualite metier exhaustive n'est pas garantie.
 
-## 8. Dictionnaire et documentation
+## 8. Documentation associee
 
-WP2 fournit :
-
-- dictionnaire_baac_complet.csv
-- modalites_baac_finalisees.csv
-- codifications_a_confirmer.csv
-- rapports de profilage et d'integrite
-- scripts de transformation
-- registre et plan des regles de nettoyage
+- README.md du WP2.
+- metadata/nettoyage/registre_regles.csv.
+- metadata/nettoyage/codes_manquants.csv.
+- Dictionnaire BAAC et codifications disponibles.
+- Tests automatises et rapports de qualite.
 
 ## 9. Points a confirmer avec WP3
 
