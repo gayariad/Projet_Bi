@@ -13,8 +13,10 @@ par WP2 a WP3 pour integration dans la zone decisionnelle.
 
 WP2 fournit la fonction Python :
 
-`from wp2_nettoyage.pipeline import donnees_propres`
-`tables = donnees_propres()`
+```python
+from wp2_nettoyage.pipeline import donnees_propres
+tables = donnees_propres()
+```
 
 Elle retourne quatre DataFrames pandas :
 
@@ -65,7 +67,7 @@ Elle retourne quatre DataFrames pandas :
 ## 5. Regles de jointure
 
 Attention : joindre simultanement lieux, vehicules
-et usagers sur num_acc seul peut multiplier les lignes.
+et usagers. La jointure sur num_acc seul peut multiplier les lignes.
 
 Pour calculer le nombre d'accidents :
 COUNT(DISTINCT num_acc), au bon niveau de granularite.
@@ -106,8 +108,9 @@ e100, e110, e115, e120, e125, e130, e140, e150.
 - lartpc a une incomplétude d'environ 99,84 % et nécessite des précautions pour les indicateurs.
 - Les règles de statut valide_notice ou valide_reunion autorisent la conversion en NA lorsqu'elle est prévue.
 - Les codes non confirmés restent inchangés dans propre_v2 : v1=-1, nbv=0, actp=7/8.
-- Ne pas attribuer automatiquement à actp=7/8 la modalité 9 (« Autre »). pr/pr1 = "(1)" (2019–2022) est normalisé puis traité comme valeur manquante conformément au référentiel.
--  Les données -1/0 ne sont pas systématiquement converties : le sens et le traitement dépendent de la variable et de l'année.
+- Ne pas attribuer automatiquement à actp=7/8 la modalité 9 (« Autre »). 
+- pr/pr1 = "(1)" (2019–2022) est normalisé puis traité comme valeur manquante conformément au référentiel.
+- Les données -1/0 ne sont pas systématiquement converties : le sens et le traitement dépendent de la variable et de l'année.
 
 ## 8. Documentation associee
 
