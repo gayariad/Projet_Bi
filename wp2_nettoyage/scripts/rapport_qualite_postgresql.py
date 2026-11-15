@@ -1,4 +1,4 @@
-﻿from pathlib import Path
+from pathlib import Path
 import pandas as pd
 
 from commun.recuperer_donnees import charger_tout
@@ -86,7 +86,7 @@ def main():
     else:
         print(modifications.to_string(index=False))
 
-    print("\nRappel : R004 est testee mais non activee dans le pipeline.")
+    print("\nRappel : les regles de nettoyage sont actives dans propre_v1 candidate et restent a valider.")
 
 
 if __name__ == "__main__":

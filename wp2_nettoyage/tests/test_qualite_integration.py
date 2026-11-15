@@ -4,6 +4,8 @@ import pytest
 
 from wp2_nettoyage.pipeline import donnees_propres
 
+pytestmark = pytest.mark.integration
+
 
 @pytest.fixture(scope="module")
 def tables():

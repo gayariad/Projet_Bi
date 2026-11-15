@@ -1,9 +1,9 @@
-﻿id;famille;variable;annees;probleme;action_proposee;statut
-R001;caracteristiques;Accident_Id;2022;Nom different;Renommer en Num_Acc dans Silver;VALIDEE
-R002;usagers;id_usager;2019-2020;Colonne absente;Conserver vide sans inventer identifiant;VALIDEE
-R003;lieux;larrout;2020-2024;Valeurs -1 tres frequentes;Verifier signification officielle;A_VERIFIER
-R004;lieux;v2;2019-2024;Marqueurs vide N/A null;Documenter et normaliser si confirme;A_VERIFIER
-R005;lieux;lartpc;2019-2024;Tres forte incompletude;Conserver et documenter;PROVISOIRE
-R006;vehicules;occutc;2019-2024;Tres forte incompletude;Conserver et verifier applicabilite;PROVISOIRE
-R007;usagers;toutes;2019-2020;164 doublons exacts supplementaires;Conserver jusqu a validation metier;A_VERIFIER
-R008;lieux;Num_Acc;2023-2024;Plusieurs lignes par accident;Conserver et documenter cardinalite;PROVISOIRE
+﻿id;famille;variable;annees;probleme;action_prevue;test_acceptation;precaution;decision;statut_initial
+R001;caracteristiques;Accident_Id;2022;Nom d'identifiant différent dans les RAW de 2022 (Accident_Id);Renommer la colonne Accident_Id en Num_Acc dans les structures Silver et propre;Vérifier la présence de Num_Acc et l'absence de Accident_Id;Aucune suppression de ligne ou de donnée;DEJA_APPLIQUE;VALIDEE
+R002;usagers;id_usager;2019-2020;Colonne absente des millésimes 2019 et 2020;Conserver id_usager vide (NULL) pour 2019-2020;Vérifier la présence de la colonne et l'absence d'identifiants fictifs;Ne jamais générer de faux identifiants métier;DEJA_APPLIQUE;VALIDEE
+R003;lieux;larrout;2020-2024;Valeurs -1 très fréquentes indiquant une absence de renseignement;Convertir les valeurs -1 en NA (information non renseignée). Conserver les valeurs valides.;Vérifier la conversion des -1 en NA et la conservation des valeurs valides;Ne supprimer aucune ligne à cause d'une largeur manquante;APPLIQUEE_PROPRE_V2;VALIDEE
+R004;lieux;v2;2019-2024;Marqueurs d'absence hétérogènes (N/A, null, chaînes vides);Normaliser les marqueurs d'absence confirmés en pd.NA. Conserver les véritables codes de voie.;Vérifier l'uniformisation des marqueurs en pd.NA;Ne supprimer aucune ligne;APPLIQUEE_PROPRE_V2;VALIDEE
+R005;lieux;lartpc;2019-2024;Forte incomplétude (environ 99,84 % de valeurs manquantes);Conserver la colonne et documenter son taux d'incomplétude dans le dictionnaire.;Mesurer le taux de remplissage et vérifier la présence de la colonne;Ne pas l'utiliser dans les analyses sans vérifier sa couverture;APPLIQUEE_PROPRE_V2;VALIDEE
+R006;vehicules;occutc;2019-2024;Très forte incomplétude sur le nombre d'occupants TC;Conserver la colonne. Distinguer 'sans objet' (hors TC) des véritables valeurs manquantes (NA).;Vérifier le croisement avec catv et la gestion explicite des NA;Ne pas remplacer automatiquement par NA ou zéro sans vérifier le type de véhicule;APPLIQUEE_PROPRE_V2;VALIDEE
+R007;usagers;toutes;2019-2020;164 occurrences de doublons détectées (299 lignes au total dans des groupes de doublons);Conserver toutes les lignes. Ajouter la colonne booléenne doublon_suspect pour signaler les 299 lignes.;Vérifier l'ajout et l'exactitude du flag doublon_suspect;Aucune suppression automatique : laisser les autres WP analyser;APPLIQUEE_PROPRE_V2;VALIDEE
+R008;lieux;Num_Acc;2023-2024;Plusieurs lignes de lieux pour un même accident;Conserver l'ensemble des lignes et documenter cette cardinalité multiple.;Vérifier la conservation des lignes multiples et la documentation des clés;Interdire toute déduplication automatique sur Num_Acc seul;APPLIQUEE_PROPRE_V2;VALIDEE

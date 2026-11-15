@@ -1,0 +1,51 @@
+﻿famille;variable;code;annee_min;annee_max;signification;type_valeur;action;statut;source;remarque
+caracteristiques;lum;-1;2019;2024;Non renseigne;non renseigne;NA;valide_reunion;Notice ONISR oct. 2025 p.4;"-1 absent de la notice ; present 2020, 2022, 2023"
+caracteristiques;int;-1;2019;2024;Non renseigne;non renseigne;NA;valide_reunion;Notice ONISR oct. 2025 p.4;"-1 absent de la notice ; present 2020, 2022, 2023"
+caracteristiques;atm;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.5;
+caracteristiques;col;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.5;
+lieux;circ;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.6;
+lieux;nbv;-1;2019;2024;Non renseigne;non renseigne;NA;valide_reunion;Notice ONISR oct. 2025 p.6;variable numerique, pas de liste de codes
+lieux;vosp;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.6;
+lieux;prof;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.6;
+lieux;plan;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.6;
+lieux;surf;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.6;
+lieux;infra;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.7;
+lieux;situ;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.7;
+lieux;vma;-1;2019;2024;Non renseigne;non renseigne;NA;valide_reunion;Notice ONISR oct. 2025 p.7;variable numerique, pas de liste de codes
+lieux;larrout;-1;2019;2024;Non renseigne;non renseigne;NA;valide_reunion;Notice ONISR oct. 2025 p.6;"variable numerique ; absence ecrite vide en 2019, -1 a partir de 2020"
+usagers;place;-1;2019;2024;Non renseigne;non renseigne;NA;valide_reunion;Notice ONISR oct. 2025 p.11;"-1 absent de la notice ; present 2021-2024 (usagers en fuite)"
+usagers;grav;-1;2019;2024;Non renseigne;non renseigne;NA;valide_reunion;Notice ONISR oct. 2025 p.11;"-1 absent de la notice ; present 2021-2023 (usagers en fuite, notice p.1)"
+usagers;sexe;-1;2019;2024;Non renseigne;non renseigne;NA;valide_reunion;Notice ONISR oct. 2025 p.11;"-1 absent de la notice ; present 2021-2024 (usagers en fuite, notice p.1)"
+usagers;trajet;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.11;
+usagers;secu1;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.11;
+usagers;secu2;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.12;
+usagers;secu3;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.12;
+usagers;locp;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.12;
+usagers;actp;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.12;
+usagers;etatp;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.13;
+vehicules;senc;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.7;
+vehicules;catv;-1;2019;2024;Non renseigne;non renseigne;NA;valide_reunion;Notice ONISR oct. 2025 p.8;"-1 absent de la notice ; present 2020-2024"
+vehicules;obs;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.8;
+vehicules;obsm;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.9;
+vehicules;choc;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.9;
+vehicules;manv;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.9;
+vehicules;motor;-1;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.10;
+lieux;pr;-1;2019;2024;PR non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.6;"Notice : ""-1 signifie que le PR n est pas renseigne"". Ecrit -1 en 2023-2024 ; ecrit ""(1)"" en 2019-2022 (format comptable Excel du -1)"
+lieux;pr1;-1;2019;2024;PR non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.6;"Idem pr : -1 en 2023-2024, ""(1)"" en 2019-2022"
+lieux;v1;-1;2019;2024;Non renseigne (presume);non renseigne;NA;a_valider;Notice ONISR oct. 2025 p.5;"Notice muette sur -1 ; present 2020-2024 ; absence ecrite vide en 2019"
+usagers;trajet;0;2019;2024;Non renseigne;non renseigne;NA;valide_notice;Notice ONISR oct. 2025 p.11;La notice donne -1 et 0 = Non renseigne
+vehicules;senc;0;2019;2024;Inconnu;inconnu;NA;valide_notice;Notice ONISR oct. 2025 p.8;
+vehicules;manv;0;2019;2024;Inconnue;inconnu;NA;valide_notice;Notice ONISR oct. 2025 p.9;
+vehicules;motor;0;2019;2024;Inconnue;inconnu;NA;valide_notice;Notice ONISR oct. 2025 p.10;
+vehicules;catv;0;2019;2024;Indeterminable;inconnu;NA;valide_notice;Notice ONISR oct. 2025 p.8;"Notice ecrit 00 ; fichiers ecrivent 0"
+usagers;actp;0;2019;2024;Non renseigne ou sans objet;sans objet;CONSERVER;valide_notice;Notice ONISR oct. 2025 p.12;"99,6 % des 0 concernent conducteurs/passagers (catu 1-2) = sans objet ; 602 pietons (catu 3) en 2019-2022"
+lieux;infra;0;2019;2024;Aucun;aucun;CONSERVER;valide_notice;Notice ONISR oct. 2025 p.7;
+lieux;vosp;0;2019;2024;Sans objet;sans objet;CONSERVER;valide_notice;Notice ONISR oct. 2025 p.6;
+usagers;locp;0;2019;2024;Sans objet;sans objet;CONSERVER;valide_notice;Notice ONISR oct. 2025 p.12;
+usagers;secu1;0;2019;2024;Aucun equipement;aucun;CONSERVER;valide_notice;Notice ONISR oct. 2025 p.11;
+usagers;secu2;0;2019;2024;Aucun equipement;aucun;CONSERVER;valide_notice;Notice ONISR oct. 2025 p.12;
+usagers;secu3;0;2019;2024;Aucun equipement;aucun;CONSERVER;valide_notice;Notice ONISR oct. 2025 p.12;secu3 = 0 : 200 a 800 par an jusqu en 2023, 10 516 en 2024 (changement de saisie probable)
+vehicules;choc;0;2019;2024;Aucun;aucun;CONSERVER;valide_notice;Notice ONISR oct. 2025 p.9;
+vehicules;obs;0;2019;2024;Sans objet;sans objet;CONSERVER;valide_notice;Notice ONISR oct. 2025 p.8;
+vehicules;obsm;0;2019;2024;Aucun;aucun;CONSERVER;valide_notice;Notice ONISR oct. 2025 p.9;
+lieux;nbv;0;2019;2024;0 voie : sens non defini;non renseigne;CONSERVER;a_valider;Notice ONISR oct. 2025 p.6;"Notice muette ; conserve provisoirement et signale (regle validee en reunion)"
