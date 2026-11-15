@@ -1,8 +1,8 @@
-# Contrat d'interface provisoire WP2 vers WP3
+# Contrat d'interface WP2 vers WP3
 
-**Version :** 0.3
-**Date :** 13/11/2026
-**Statut :** PROPOSITION - non encore acceptee par WP3
+**Version :** 0.4
+**Date :** 14/11/2026
+**Statut :** Validé par WP3
 
 ## 1. Objet
 
@@ -13,8 +13,10 @@ par WP2 a WP3 pour integration dans la zone decisionnelle.
 
 WP2 fournit la fonction Python :
 
-`from wp2_nettoyage.pipeline import donnees_propres`
-`tables = donnees_propres()`
+```python
+from wp2_nettoyage.pipeline import donnees_propres
+tables = donnees_propres()
+```
 
 Elle retourne quatre DataFrames pandas :
 
@@ -33,7 +35,6 @@ Elle retourne quatre DataFrames pandas :
 - Dates et heures construites dans caracteristiques.
 - Valeurs absentes normalisees en pd.NA.
 - Aucun export CSV final n'est impose par ce contrat.
-- Les formats de stockage cibles restent a confirmer avec WP3.
 
 ## 4. Cles et cardinalites
 
@@ -55,6 +56,7 @@ Elle retourne quatre DataFrames pandas :
 - Les donnees 2023 et 2024 peuvent contenir
   plusieurs lignes de lieux pour un accident.
 - Ne pas imposer de contrainte UNIQUE sur lieux.num_acc.
+- lieu_principal=True identifie une ligne de référence par accident lorsque l'analyse exige un seul lieu
 
 ### Vehicules vers usagers
 
@@ -65,7 +67,7 @@ Elle retourne quatre DataFrames pandas :
 ## 5. Regles de jointure
 
 Attention : joindre simultanement lieux, vehicules
-et usagers sur num_acc seul peut multiplier les lignes.
+et usagers. La jointure sur num_acc seul peut multiplier les lignes.
 
 Pour calculer le nombre d'accidents :
 COUNT(DISTINCT num_acc), au bon niveau de granularite.
@@ -88,9 +90,9 @@ e100, e110, e115, e120, e125, e130, e140, e150.
 - Harmonisation, typage, dates et heures.
 - Traitement des valeurs manquantes selon les regles ONISR validees.
 - Signalement des valeurs hors plage, sans suppression.
-- caracteristiques.metropole : indicateur geographique.
-- caracteristiques.coordonnees_suspectes : controle geographique.
-- lieux.vma_suspecte : controle de vitesse, seuil provisoire 10-130.
+- caracteristiques.metropole : permet un filtre métropole sans supprimer les observations d'outre-mer.
+- caracteristiques.coordonnees_suspectes : détecte les coordonnées (0,0) et les latitudes/longitudes hors limites physiques mondiales, sans contrôler l'appartenance aux frontières françaises.
+- lieux.vma_suspecte : controle de vitesse, seuil 10-130.
 - lieux.lieu_principal : exactement un lieu principal par accident.
 - usagers.doublon_suspect : signalement sans suppression.
 
@@ -101,35 +103,20 @@ e100, e110, e115, e120, e125, e130, e140, e150.
 - Les lignes multiples de lieux sont conservees.
 - R006 est validee : occutc est conservee sans imputation automatique.
 - L'interpretation de occutc selon catv doit etre prise en compte par WP3.
-- Certaines modalites ONISR restent a confirmer.
 - Le seuil VMA reste un critere provisoire de signalement.
 - La qualite metier exhaustive n'est pas garantie.
+- lartpc a une incomplétude d'environ 99,84 % et nécessite des précautions pour les indicateurs.
+- Les règles de statut valide_notice ou valide_reunion autorisent la conversion en NA lorsqu'elle est prévue.
+- Les codes non confirmés restent inchangés dans propre_v2 : v1=-1, nbv=0, actp=7/8.
+- Ne pas attribuer automatiquement à actp=7/8 la modalité 9 (« Autre »). 
+- pr/pr1 = "(1)" (2019–2022) est normalisé puis traité comme valeur manquante conformément au référentiel.
+- Les données -1/0 ne sont pas systématiquement converties : le sens et le traitement dépendent de la variable et de l'année.
 
 ## 8. Documentation associee
 
 - README.md du WP2.
 - metadata/nettoyage/registre_regles.csv.
 - metadata/nettoyage/codes_manquants.csv.
-- Dictionnaire BAAC et codifications disponibles.
+- wp2_nettoyage/metadata/codifications/dictionnaire_baac_complet.csv.
+- wp2_nettoyage/metadata/codifications/modalites_baac_finalisees.csv.
 - Tests automatises et rapports de qualite.
-
-## 9. Points a confirmer avec WP3
-
-- [ ] Separateur et encodage acceptes.
-- [ ] Noms des fichiers et des colonnes acceptes.
-- [ ] Types cibles des donnees.
-- [ ] Gestion des valeurs non renseignees.
-- [ ] Strategie de jointure avec lieux.
-- [ ] Gestion des doublons d'usagers 2019-2020.
-- [ ] Strategie d'identification des usagers sans id_usager.
-- [ ] Besoins sur les colonnes obligatoires.
-- [ ] Methode de depot et de versionnement.
-- [ ] Regles d'acceptation de la livraison.
-
-## 10. Critere de validation de l'interface
-
-Ce document deviendra un contrat valide lorsque
-les representants WP2 et WP3 auront confirme
-les points precedents et consigne leur accord.
-
-Aucune acceptation n'est presumee a ce stade.
