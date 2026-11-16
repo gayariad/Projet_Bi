@@ -1,8 +1,11 @@
 ﻿"""Verification de la conservation des volumes BAAC apres nettoyage."""
 
+import pytest
 from commun.recuperer_donnees import charger_tout
 from wp2_nettoyage.pipeline import donnees_propres
 
+
+pytestmark = pytest.mark.integration
 
 def test_conservation_volumes():
     tables_brutes = charger_tout()

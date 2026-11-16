@@ -1,9 +1,12 @@
 ﻿"""Controle d'integrite du lieu principal sur les donnees BAAC reelles."""
 
+import pytest
 import pandas as pd
 from commun.recuperer_donnees import charger_tout
 from wp2_nettoyage.pipeline import donnees_propres
 
+
+pytestmark = pytest.mark.integration
 
 def test_integrite_lieu_principal():
     brutes = charger_tout()["lieux"]
