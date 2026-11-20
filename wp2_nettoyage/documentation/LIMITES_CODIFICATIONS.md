@@ -25,3 +25,54 @@ Responsable : Febbe Kiazi Tsaka Ngoma (WP2).
 - `actp = 0` : presque toujours des conducteurs et des passagers (= sans objet). Seuls 602 piétons sont concernés (2019-2022).
 - `secu3 = 0` : de 200 à 800 lignes par an jusqu'en 2023, puis 10 516 en 2024. La façon de remplir a probablement changé : prudence pour comparer 2024 aux autres années.
 - `catv` : aucune signification n'a changé entre 2019 et 2024. La notice écrit `00, 01…`, les fichiers écrivent `0, 1…` (même code).
+
+
+---
+
+## Decisions validees pour propre_v3
+
+Les decisions provisoires ci-dessus decrivent la situation historique de
+`propre_v2`. Les arbitrages suivants ont ete valides pour `propre_v3`.
+
+Le referentiel `codes_manquants.csv` contient maintenant 53 regles.
+
+| Variable | Decision propre_v3 | Lignes concernees |
+|---|---|---:|
+| `lieux.v1 = -1` | Convertir en `NA` | 61 239 |
+| `lieux.nbv = 0` | Convertir en `NA` (non renseigne) | 9 736 |
+| `usagers.actp = B` | Convertir en `NA` (activite inconnue) | 1 970 |
+| `usagers.actp = 7 / 8` | Conserver les deux modalites | 107 / 75 |
+
+### Justification de nbv = 0
+
+L'analyse par categorie de route (`catr`) indique que 8 439 des 9 736
+observations concernees, soit environ 86,7 %, se trouvent dans les
+categories 1 a 4. La valeur 0 est donc traitee comme information
+non renseignee, sans l'interpreter comme une route sans voie.
+
+### Rupture de serie secu3 en 2024
+
+La modalite `secu3 = 0` passe d'environ 200 a 800 observations par an
+jusqu'en 2023 a 10 516 en 2024.
+
+Cette rupture peut correspondre a une evolution du renseignement.
+Il ne faut pas comparer directement la frequence de cette modalite
+en 2024 avec les annees precedentes sans analyse complementaire.
+
+### Vehicules sans usager associe
+
+4 009 vehicules ne possedent pas d'usager associe dans les donnees
+etudiees. Cette situation doit etre prise en compte lors des jointures
+entre les tables `vehicules` et `usagers`.
+
+Ne pas supprimer automatiquement ces vehicules ni creer d'usagers
+fictifs pour combler cette absence.
+
+### Autres corrections propre_v3
+
+Les autres decisions sont tracees dans
+`wp2_nettoyage/metadata/nettoyage/registre_regles.csv` :
+R009 a R015.
+
+La version v3 conserve les memes colonnes, types et nombres de lignes
+que `propre-v2` dans les quatre tables BAAC.

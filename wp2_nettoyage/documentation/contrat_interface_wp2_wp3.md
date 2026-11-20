@@ -120,3 +120,73 @@ e100, e110, e115, e120, e125, e130, e140, e150.
 - wp2_nettoyage/metadata/codifications/dictionnaire_baac_complet.csv.
 - wp2_nettoyage/metadata/codifications/modalites_baac_finalisees.csv.
 - Tests automatises et rapports de qualite.
+
+
+---
+
+## 9. Avenant propre_v3
+
+**Version proposee :** 0.5
+**Statut :** En attente de validation WP3.
+**Reference :** PR #14.
+
+Cet avenant complete le contrat v0.4 valide par WP3.
+Les mentions relatives aux codes non confirmes dans `propre_v2`
+decrivent la situation historique et sont remplacees par les
+decisions ci-dessous pour `propre_v3`.
+
+### 9.1 Compatibilite structurelle
+
+Comparaison du pipeline `propre-v2` et de la branche
+`fix/wp2-propre-v3` sur les donnees BAAC 2019-2024 :
+
+| Table | Lignes V2 = V3 | Colonnes V2 = V3 |
+|---|---:|---:|
+| caracteristiques | 327 628 | 21 |
+| lieux | 359 512 | 21 |
+| vehicules | 559 847 | 12 |
+| usagers | 745 158 | 18 |
+
+Resultats :
+- Aucune colonne ajoutee ou supprimee.
+- Aucun type pandas modifie.
+- Aucun nombre de lignes modifie.
+- Total conserve : 1 992 145 lignes.
+- Les valeurs corrigees evoluent volontairement entre les versions.
+
+### 9.2 Corrections de donnees
+
+| Variable | Correction propre_v3 | Volume |
+|---|---|---:|
+| caracteristiques.dep | Normalisation des departements sur un chiffre | 2 966 accidents reclasses |
+| usagers.doublon_suspect | Comparaison sans id_usager | 1 280 lignes signalees, soit 981 supplementaires |
+| lieux.vma | 300/500/700/900 deviennent 30/50/70/90 | 82 |
+| lieux.v1 | -1 devient NA | 61 239 |
+| lieux.nbv | 0 devient NA | 9 736 |
+| usagers.actp | B devient NA | 1 970 |
+| usagers.an_nais | 1900, age > 105 ans ou age negatif deviennent NA | 205 |
+
+Les 82 VMA corrigees conservent `vma_suspecte=True`.
+Aucune ligne n'est supprimee.
+
+### 9.3 Consignes pour WP3
+
+- Recharger l'entrepot a partir de `propre-v3` apres publication officielle.
+- Ne pas conserver les anciennes valeurs des champs corriges.
+- Conserver les usagers signales comme doublons ; aucune suppression
+  automatique n'a ete effectuee.
+- Ne pas considerer `nbv=0` comme une route sans voie.
+- Conserver les modalites `actp=7` et `actp=8`.
+- Tenir compte des 4 009 vehicules sans usager associe lors des jointures.
+- Ne pas comparer directement `secu3=0` en 2024 aux annees precedentes
+  sans analyser la rupture de serie.
+
+### 9.4 Validation
+
+Le pipeline a passe 42 tests automatises.
+
+La compatibilite structurelle a ete verifiee par comparaison
+des colonnes, types pandas et nombres de lignes des quatre tables.
+
+Cet avenant reste soumis a validation WP3 avant d'etre considere
+comme une nouvelle version du contrat approuve.
