@@ -59,7 +59,7 @@ def charger_referentiel(chemin=REFERENTIEL) -> pd.DataFrame:
         raise ValueError(f"Actions inconnues dans le referentiel : {actions}")
 
     ref["statut"] = ref["statut"].str.strip().str.lower()
-    ref["code"] = pd.to_numeric(ref["code"])
+    ref["code"] = ref["code"].astype("string").str.strip().str.upper()
     ref["annee_min"] = pd.to_numeric(ref["annee_min"])
     ref["annee_max"] = pd.to_numeric(ref["annee_max"])
     return ref
@@ -119,8 +119,23 @@ def appliquer_codes(df, famille, regles, annee) -> pd.DataFrame:
         if regle.variable not in df.columns:
             continue
 
-        valeurs = pd.to_numeric(df[regle.variable].astype("string"), errors="coerce")
-        masque = (valeurs == regle.code).fillna(False)
+        code_numerique = pd.to_numeric(
+            pd.Series([regle.code]), errors="coerce"
+        ).iloc[0]
+
+        if pd.notna(code_numerique):
+            valeurs = pd.to_numeric(
+                df[regle.variable].astype("string"), errors="coerce"
+            )
+            masque = (valeurs == code_numerique).fillna(False)
+        else:
+            valeurs = (
+                df[regle.variable]
+                .astype("string")
+                .str.strip()
+                .str.upper()
+            )
+            masque = valeurs.eq(regle.code).fillna(False)
 
         toute_la_periode = (
             regle.annee_min <= PERIODE_MIN and regle.annee_max >= PERIODE_MAX
@@ -131,6 +146,28 @@ def appliquer_codes(df, famille, regles, annee) -> pd.DataFrame:
 
         df[regle.variable] = df[regle.variable].mask(masque, pd.NA)
 
+    return df
+
+
+
+def corriger_annees_naissance(df: pd.DataFrame, annees: pd.Series) -> pd.DataFrame:
+    """Regle Baptiste v3 : 1900, age > 105 ou age negatif -> NA.
+
+    Aucun usager supprime ; an_nais reste Int64.
+    """
+    if "an_nais" not in df.columns:
+        return df
+
+    naissance = pd.to_numeric(df["an_nais"], errors="coerce")
+    age = annees - naissance
+
+    suspects = (
+        naissance.eq(1900)
+        | age.gt(105)
+        | age.lt(0)
+    ).fillna(False)
+
+    df["an_nais"] = naissance.mask(suspects, pd.NA).astype("Int64")
     return df
 
 
@@ -148,6 +185,8 @@ def appliquer(t: dict, referentiel: pd.DataFrame = None) -> dict:
         df = normaliser_variantes(df)
         annee = annee_des_lignes(df, annees_acc)
         df = appliquer_codes(df, famille, regles, annee)
+        if famille == "usagers":
+            df = corriger_annees_naissance(df, annee)
         resultat[famille] = df
 
     return resultat

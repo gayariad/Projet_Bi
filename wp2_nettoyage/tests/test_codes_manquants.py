@@ -134,14 +134,15 @@ def test_referentiel_officiel_valide():
     assert not ref.duplicated(["famille", "variable", "code", "annee_min"]).any()
 
     # Codes 0 valides par Febbe avec la notice ONISR.
-    zeros_na = applicables[applicables["code"] == 0]
+    zeros_na = applicables[applicables["code"] == "0"]
     assert {"trajet", "senc", "manv", "motor", "catv"} <= set(zeros_na["variable"])
 
     # Regles encore a valider : jamais appliquees.
     en_attente = ref[~ref["statut"].str.startswith("valid")]
-    assert {"v1", "nbv"} <= set(en_attente["variable"])
+    assert not {"v1", "nbv"} & set(en_attente["variable"])
+    assert {"v1", "nbv"} <= set(applicables["variable"])
     assert applicables.merge(en_attente, how="inner").empty
 
     # Les zeros qui sont de vraies modalites restent conserves.
-    conserves = ref[(ref["code"] == 0) & (ref["action"] == "CONSERVER")]
+    conserves = ref[(ref["code"] == "0") & (ref["action"] == "CONSERVER")]
     assert {"infra", "vosp", "obs", "secu1", "actp"} <= set(conserves["variable"])
