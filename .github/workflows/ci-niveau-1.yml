@@ -1,0 +1,92 @@
+name: CI niveau 1
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-niveau-1-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  BASE_REF: ${{ github.base_ref || 'main' }}
+
+jobs:
+  python:
+    name: Python (ruff lint + format)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Installer ruff
+        run: pip install "ruff==0.8.6"
+      - name: Lister les .py modifiés
+        id: fichiers
+        run: |
+          git diff --name-only --diff-filter=ACMR "origin/$BASE_REF...HEAD" -- '*.py' > changed.txt
+          echo "Fichiers .py modifiés :"; cat changed.txt
+          echo "n=$(wc -l < changed.txt)" >> "$GITHUB_OUTPUT"
+      - name: ruff check
+        if: steps.fichiers.outputs.n != '0'
+        run: xargs -a changed.txt ruff check
+      - name: ruff format --check
+        if: steps.fichiers.outputs.n != '0'
+        run: xargs -a changed.txt ruff format --check
+
+  sql:
+    name: SQL (sqlfluff)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Lister les .sql modifiés
+        id: fichiers
+        run: |
+          git diff --name-only --diff-filter=ACMR "origin/$BASE_REF...HEAD" -- '*.sql' > changed.txt
+          echo "Fichiers .sql modifiés :"; cat changed.txt
+          echo "n=$(wc -l < changed.txt)" >> "$GITHUB_OUTPUT"
+      - name: Installer sqlfluff
+        if: steps.fichiers.outputs.n != '0'
+        run: pip install "sqlfluff==3.3.0"
+      - name: sqlfluff lint
+        if: steps.fichiers.outputs.n != '0'
+        run: xargs -a changed.txt sqlfluff lint
+
+  secrets:
+    name: Secrets (gitleaks)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Installer gitleaks
+        run: |
+          curl -sSL https://github.com/gitleaks/gitleaks/releases/download/v8.21.2/gitleaks_8.21.2_linux_x64.tar.gz | tar -xz gitleaks
+      - name: Chercher des secrets dans les commits de la PR
+        run: |
+          ./gitleaks detect --source . --config .gitleaks.toml \
+            --log-opts "origin/$BASE_REF..HEAD" --redact --verbose
+
+  fichiers-lourds:
+    name: Fichiers lourds (> 5 Mo)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Vérifier la taille des fichiers modifiés
+        run: |
+          git diff --name-only --diff-filter=ACMR "origin/$BASE_REF...HEAD" > changed.txt
+          xargs -a changed.txt -d '\n' python3 .github/scripts/fichiers_lourds.py --max-mo 5

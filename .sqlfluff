@@ -1,0 +1,12 @@
+[sqlfluff]
+dialect = postgres
+templater = raw
+max_line_length = 120
+# On désactive quelques règles de mise en forme trop pointilleuses pour démarrer
+exclude_rules = LT05, LT09, LT14, AM04, RF04
+
+[sqlfluff:rules:capitalisation.keywords]
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.identifiers]
+extended_capitalisation_policy = lower
