@@ -11,5 +11,7 @@ def test_actp_moins_un_texte():
 
     resultat = appliquer(brut)["usagers"]["actp"]
 
-    assert resultat.isna().sum() == 2
-    assert resultat.iloc[2:].tolist() == ["A", "B", "0"]
+    assert resultat.isna().sum() == 3
+    assert resultat.iloc[2] == "A"
+    assert pd.isna(resultat.iloc[3])
+    assert resultat.iloc[4] == "0"
