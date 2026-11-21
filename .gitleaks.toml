@@ -1,0 +1,11 @@
+title = "Projet_Bi - gitleaks"
+
+[extend]
+useDefault = true
+
+# Fichiers d'exemple : pas de vrais secrets dedans, donc on ne les scanne pas
+[allowlist]
+paths = [
+  '''\.env\.exemple$''',
+  '''\.env\.example$''',
+]
