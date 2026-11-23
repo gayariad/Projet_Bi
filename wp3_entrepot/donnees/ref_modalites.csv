@@ -1,0 +1,296 @@
+famille;variable;code;effectif_total;annees_presentes;libelle;type;statut;source;annees;remarque;label_en;note_traduction
+caracteristiques;agg;2;208478;6;En agglomeration;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Within built-up area;Clarifie : libelle ONISR peu clair
+caracteristiques;agg;1;119150;6;Hors agglomeration;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Outside built-up area;Clarifie : libelle ONISR peu clair
+caracteristiques;atm;1;258945;6;Normale;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Normal;
+caracteristiques;atm;2;36659;6;Pluie legere;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Light rain;
+caracteristiques;atm;8;12844;6;Temps couvert;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Overcast weather;
+caracteristiques;atm;3;7599;6;Pluie forte;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Heavy rain;
+caracteristiques;atm;7;5781;6;Temps eblouissant;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Glare;
+caracteristiques;atm;5;2277;6;Brouillard ou fumee;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Fog or smoke;
+caracteristiques;atm;9;1504;6;Autre;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Other;
+caracteristiques;atm;4;1025;6;Neige ou grele;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Snow or hail;
+caracteristiques;atm;6;968;6;Vent fort ou tempete;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Strong wind or storm;
+caracteristiques;atm;-1;26;5;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2023;Absent en 2024;Not specified;
+caracteristiques;col;3;98640;6;Deux vehicules - par le cote;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Two vehicles - side;
+caracteristiques;col;6;96929;6;Autre collision;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Other collision;
+caracteristiques;col;2;42818;6;Deux vehicules - par l'arriere;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Two vehicles - rear-end;
+caracteristiques;col;1;33417;6;Deux vehicules - frontale;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Two vehicles - head-on;
+caracteristiques;col;7;32956;6;Sans collision;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;No collision;
+caracteristiques;col;4;11643;6;Trois vehicules ou plus - en chaine;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Three or more vehicles - chain collision;
+caracteristiques;col;5;9606;6;Trois vehicules ou plus - collisions multiples;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Three or more vehicles - multiple collisions;
+caracteristiques;col;-1;1619;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+caracteristiques;int;1;210562;6;Hors intersection;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Outside intersection;
+caracteristiques;int;2;39547;6;Intersection en X;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;X-shaped intersection;
+caracteristiques;int;3;36108;6;Intersection en T;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;T-junction;
+caracteristiques;int;9;14406;6;Autre intersection;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Other intersection;
+caracteristiques;int;6;13934;6;Giratoire;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Roundabout;
+caracteristiques;int;4;7155;6;Intersection en Y;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Y-junction;
+caracteristiques;int;7;3371;6;Place;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Square;
+caracteristiques;int;5;1862;6;Intersection a plus de 4 branches;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Intersection with more than 4 branches;
+caracteristiques;int;8;669;6;Passage a niveau;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Level crossing;
+caracteristiques;int;-1;14;3;Non renseigne;CODE_A_INTERPRETER;VALIDE_REUNION;Decision reunion WP2 (cf. codes_manquants.csv);2020, 2022, 2023;"-1 absent de la notice pour cette variable ; present en 2020, 2022, 2023";Not specified;
+caracteristiques;lum;1;218409;6;Plein jour;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Broad daylight;
+caracteristiques;lum;5;51147;6;Nuit avec eclairage public allume;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Night with street lighting on;
+caracteristiques;lum;3;33324;6;Nuit sans eclairage public;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Night without street lighting;
+caracteristiques;lum;2;21529;6;Crepuscule ou aube;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Dusk or dawn;
+caracteristiques;lum;4;3210;6;Nuit avec eclairage public non allume;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Night with street lighting off;
+caracteristiques;lum;-1;9;3;Non renseigne;CODE_A_INTERPRETER;VALIDE_REUNION;Decision reunion WP2 (cf. codes_manquants.csv);2020, 2022, 2023;"-1 absent de la notice pour cette variable ; present en 2020, 2022, 2023";Not specified;
+lieux;catr;4;156577;6;Voie communale;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Municipal road;
+lieux;catr;3;134316;6;Route departementale;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Departmental road;
+lieux;catr;1;31111;6;Autoroute;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Motorway;
+lieux;catr;2;22014;6;Route nationale;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;National road;
+lieux;catr;7;10674;6;Route de metropole urbaine;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Urban metropolitan road;
+lieux;catr;6;2417;6;Parc de stationnement ouvert a la circulation;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Car park open to public traffic;
+lieux;catr;9;1994;6;Autre;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Other;
+lieux;catr;5;409;6;Hors reseau public;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Off public network;
+lieux;circ;2;222669;6;Bidirectionnelle;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Two-way;
+lieux;circ;1;66387;6;Sens unique;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;One-way;
+lieux;circ;3;46712;6;Chaussees separees;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Separate carriageways;
+lieux;circ;-1;21559;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+lieux;circ;4;2185;6;Voies d'affectation variable;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Variable lanes;
+lieux;infra;0;299744;6;Aucun;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;None;
+lieux;infra;5;21540;6;Carrefour amenage;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Improved crossroads;
+lieux;infra;9;12757;6;Autres;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Other;
+lieux;infra;2;5925;6;Pont ou autopont;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Bridge or flyover;
+lieux;infra;3;4400;6;Bretelle d'echangeur ou de raccordement;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Interchange or junction slip road;
+lieux;infra;-1;3971;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+lieux;infra;1;3895;6;Souterrain ou tunnel;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Underground or tunnel;
+lieux;infra;6;3367;6;Zone pietonne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Pedestrian zone;
+lieux;infra;8;2579;6;Chantier;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Construction site;
+lieux;infra;4;1128;6;Voie ferree;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Railway line;
+lieux;infra;7;206;6;Zone de peage;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Toll area;
+lieux;plan;1;291561;6;Partie rectiligne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Straight section;
+lieux;plan;2;33088;6;Courbe a gauche;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Left-hand curve;
+lieux;plan;3;30126;6;Courbe a droite;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Right-hand curve;
+lieux;plan;4;4499;6;En S;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;S-shaped;
+lieux;plan;-1;238;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+lieux;prof;1;292107;6;Plat;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Flat;
+lieux;prof;2;56396;6;Pente;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Slope;
+lieux;prof;3;5710;6;Sommet de cote;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Top of hill;
+lieux;prof;4;5000;6;Bas de cote;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Bottom of hill;
+lieux;prof;-1;299;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+lieux;situ;1;300331;6;Sur chaussee;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;On the road;
+lieux;situ;3;24089;6;Sur accotement;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;On verge;Corrige : traduction ONISR erronee
+lieux;situ;8;12236;6;Autres;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Other;
+lieux;situ;5;8237;6;Sur piste cyclable;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;On cycle path;
+lieux;situ;4;7284;6;Sur trottoir;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;On pavement;
+lieux;situ;6;4310;6;Sur autre voie speciale;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;On other special lane;
+lieux;situ;2;2647;6;Sur bande d'arret d'urgence;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;On hard shoulder;
+lieux;situ;-1;378;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+lieux;surf;1;287101;6;Normale;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Normal;
+lieux;surf;2;66945;6;Mouillee;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Wet;
+lieux;surf;9;1839;6;Autre;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Other;
+lieux;surf;7;1221;6;Verglacee;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Icy;
+lieux;surf;3;589;6;Flaques;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Puddles;
+lieux;surf;8;533;6;Corps gras ou huile;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Grease or oil;Corrige : traduction ONISR erronee
+lieux;surf;5;531;6;Enneigee;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Snowy;
+lieux;surf;-1;310;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+lieux;surf;6;282;6;Boue;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Muddy;
+lieux;surf;4;161;6;Inondee;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Flooded;
+lieux;vosp;0;309464;6;Sans objet;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not applicable;
+lieux;vosp;1;18139;6;Piste cyclable;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Cycle path;Corrige : traduction ONISR erronee
+lieux;vosp;3;12598;6;Voie reservee;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Reserved lane;
+lieux;vosp;2;10203;6;Bande cyclable;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Cycle lane;
+lieux;vosp;-1;9108;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+usagers;actp;0;376146;6;Non renseigne ou sans objet;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"Notice : non renseigne ou sans objet. 99,6 % concernent conducteurs/passagers (= sans objet) ; 602 pietons en 2019-2022";Not specified or not applicable;
+usagers;actp;-1;310645;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+usagers;actp;3;42938;6;Traversant;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Crossing;
+usagers;actp;9;3911;6;Autre;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Other;
+usagers;actp;1;3791;6;Sens du vehicule heurtant;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Moving in the direction of the striking vehicle;Clarifie : libelle ONISR peu clair
+usagers;actp;5;2205;6;Jouant ou courant;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Playing or running;
+usagers;actp;B;1970;6;Inconnue;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Unknown;
+usagers;actp;2;1806;6;Sens inverse du vehicule;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Moving opposite to the vehicle;Clarifie : libelle ONISR peu clair
+usagers;actp;4;716;6;Masque;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Hidden;
+usagers;actp;A;692;6;Monte ou descend du vehicule;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Getting in or out of the vehicle;
+usagers;actp;6;156;6;Avec animal;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;With animal;
+usagers;actp;7;107;6;Quitte l'arret du transport collectif;CODE_A_INTERPRETER;HISTORIQUE_A_CONFIRMER;Guide BAAC 2017;2019-2024;"Absent des notices 2018, 2020 et 2025 ; libelle historique non officiel ; a regrouper avec actp = 9 (Autre) en analyse";Leaving a public transport stop;Provisoire : code absent de la notice 2025 (guide BAAC 2017)
+usagers;actp;8;75;6;Accede a l'arret du transport collectif;CODE_A_INTERPRETER;HISTORIQUE_A_CONFIRMER;Guide BAAC 2017;2019-2024;"Absent des notices 2018, 2020 et 2025 ; libelle historique non officiel ; a regrouper avec actp = 9 (Autre) en analyse";Going to a public transport stop;Provisoire : code absent de la notice 2025 (guide BAAC 2017)
+usagers;catu;1;553269;6;Conducteur;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Driver;
+usagers;catu;2;134376;6;Passager;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Passenger;
+usagers;catu;3;57513;6;Pieton;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Pedestrian;
+usagers;etatp;-1;686868;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+usagers;etatp;1;44392;6;Seul;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Alone;
+usagers;etatp;2;11597;6;Accompagne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Accompanied;
+usagers;etatp;3;2301;6;En groupe;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;In a group;
+usagers;grav;1;313673;6;Indemne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Uninjured;
+usagers;grav;4;296806;6;Blesse leger;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Slightly injured;
+usagers;grav;3;114383;6;Blesse hospitalise;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Hospitalised injured;
+usagers;grav;2;19877;6;Tue;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Killed;
+usagers;grav;-1;419;3;Non renseigne;CODE_A_INTERPRETER;VALIDE_REUNION;Decision reunion WP2 (cf. codes_manquants.csv);2021-2023;"-1 absent de la notice pour cette variable ; present en 2021-2023 ; usagers en fuite ajoutes depuis 2021 (notice p.1)";Not specified;
+usagers;locp;0;345062;6;Sans objet;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not applicable;
+usagers;locp;-1;341854;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+usagers;locp;3;18413;6;Passage pieton sans signalisation lumineuse;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;On pedestrian crossing without traffic lights;Clarifie : libelle ONISR peu clair
+usagers;locp;2;12476;6;Chaussee a moins de 50 m du passage pieton;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;On road, less than 50 m from pedestrian crossing;Corrige : traduction ONISR erronee
+usagers;locp;4;8746;6;Passage pieton avec signalisation lumineuse;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;On pedestrian crossing with traffic lights;Clarifie : libelle ONISR peu clair
+usagers;locp;1;8425;6;Chaussee a plus de 50 m du passage pieton;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;On road, more than 50 m from pedestrian crossing;Corrige : traduction ONISR erronee
+usagers;locp;5;4617;6;Sur trottoir;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;On pavement;
+usagers;locp;9;2875;6;Inconnue;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Unknown;
+usagers;locp;6;1775;6;Sur accotement;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;On verge;Corrige : traduction ONISR erronee
+usagers;locp;8;855;6;Sur contre-allee;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;On side lane;
+usagers;locp;7;60;6;Sur refuge ou bande d'arret d'urgence;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;On refuge or hard shoulder;Clarifie : libelle ONISR peu clair
+usagers;secu1;1;438239;6;Ceinture;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Seatbelt;
+usagers;secu1;2;134560;6;Casque;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Helmet;
+usagers;secu1;8;90179;6;Non determinable;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not determinable;
+usagers;secu1;0;65336;6;Aucun equipement;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;No equipment;
+usagers;secu1;-1;9986;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+usagers;secu1;3;4607;6;Dispositif enfants;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Child restraint;
+usagers;secu1;9;797;6;Autre;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Other;
+usagers;secu1;6;660;6;Gants deux ou trois roues;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Gloves (2/3-wheeler);
+usagers;secu1;4;505;6;Gilet reflechissant;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Reflective vest;
+usagers;secu1;5;271;6;Airbag deux ou trois roues;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Airbag (2/3-wheeler);
+usagers;secu1;7;18;6;Gants et airbag deux ou trois roues;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Gloves and airbag (2/3-wheeler);
+usagers;secu2;-1;302741;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+usagers;secu2;0;281592;6;Aucun equipement;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;No equipment;
+usagers;secu2;8;70010;6;Non determinable;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not determinable;
+usagers;secu2;6;68400;6;Gants deux ou trois roues;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Gloves (2/3-wheeler);
+usagers;secu2;5;8097;6;Airbag deux ou trois roues;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Airbag (2/3-wheeler);
+usagers;secu2;4;7662;6;Gilet reflechissant;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Reflective vest;
+usagers;secu2;9;2361;6;Autre;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Other;
+usagers;secu2;1;1330;6;Ceinture;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Seatbelt;
+usagers;secu2;2;1081;6;Casque;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Helmet;
+usagers;secu2;3;944;6;Dispositif enfants;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Child restraint;
+usagers;secu2;7;940;6;Gants et airbag deux ou trois roues;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Gloves and airbag (2/3-wheeler);
+usagers;secu3;-1;725113;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+usagers;secu3;0;12631;6;Aucun equipement;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;200 a 800 par an jusqu'en 2023, 10 516 en 2024 : changement de saisie probable, prudence pour comparer 2024;No equipment;
+usagers;secu3;9;5577;6;Autre;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Other;
+usagers;secu3;8;843;6;Non determinable;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not determinable;
+usagers;secu3;6;415;6;Gants deux ou trois roues;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Gloves (2/3-wheeler);
+usagers;secu3;1;291;5;Ceinture;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019, 2020, 2022, 2023, 2024;Absent en 2021;Seatbelt;
+usagers;secu3;4;136;6;Gilet reflechissant;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Reflective vest;
+usagers;secu3;5;74;6;Airbag deux ou trois roues;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Airbag (2/3-wheeler);
+usagers;secu3;2;41;6;Casque;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Helmet;
+usagers;secu3;7;21;5;Gants et airbag deux ou trois roues;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2020-2024;Absent en 2019;Gloves and airbag (2/3-wheeler);
+usagers;secu3;3;16;5;Dispositif enfants;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019, 2020, 2022, 2023, 2024;Absent en 2021;Child restraint;
+usagers;sexe;1;501749;6;Masculin;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Male;
+usagers;sexe;2;232777;6;Feminin;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Female;Corrige : traduction ONISR erronee
+usagers;sexe;-1;10632;4;Non renseigne;CODE_A_INTERPRETER;VALIDE_REUNION;Decision reunion WP2 (cf. codes_manquants.csv);2021-2024;"-1 absent de la notice pour cette variable ; present en 2021-2024 ; usagers en fuite ajoutes depuis 2021 (notice p.1)";Not specified;
+usagers;trajet;5;273528;6;Promenade - loisirs;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Walking - leisure;
+usagers;trajet;0;194800;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+usagers;trajet;1;97834;6;Domicile - travail;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Home - work;
+usagers;trajet;4;67677;6;Utilisation professionnelle;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Professional use;
+usagers;trajet;9;59731;6;Autre;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Other;
+usagers;trajet;3;23340;6;Courses - achats;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Shopping;
+usagers;trajet;2;16223;6;Domicile - ecole;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Home - school;
+usagers;trajet;-1;12025;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+vehicules;catv;7;329344;6;Voiture de tourisme seule;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Passenger car;Clarifie : libelle ONISR peu clair
+vehicules;catv;33;44871;6;Motocyclette de plus de 125 cm3;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Motorcycle over 125 cm3;
+vehicules;catv;10;39508;6;Vehicule utilitaire;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Light commercial vehicle (1.5 to 3.5 t);Clarifie : libelle ONISR peu clair
+vehicules;catv;1;31117;6;Bicyclette;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Bicycle;
+vehicules;catv;2;20478;6;Cyclomoteur moins de 50 cm3;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Moped under 50 cm3;
+vehicules;catv;30;15981;6;Scooter moins de 50 cm3;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Scooter under 50 cm3;
+vehicules;catv;32;12180;6;Scooter de 50 a 125 cm3;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Scooter 50 to 125 cm3;
+vehicules;catv;50;10378;6;EDP a moteur;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Motorised personal mobility device;Clarifie : libelle ONISR peu clair
+vehicules;catv;31;10082;6;Motocyclette de 50 a 125 cm3;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Motorcycle 50 to 125 cm3;
+vehicules;catv;34;5799;6;Scooter de plus de 125 cm3;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Scooter over 125 cm3;
+vehicules;catv;15;5530;6;Poids lourd avec remorque;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";HGV over 3.5 t with trailer;Clarifie : libelle ONISR peu clair
+vehicules;catv;14;4161;6;Poids lourd de plus de 7,5 tonnes;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";HGV over 7.5 t;Clarifie : libelle ONISR peu clair
+vehicules;catv;37;3871;6;Autobus;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Bus;
+vehicules;catv;17;3739;6;Tracteur routier avec semi-remorque;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Road tractor with semi-trailer;
+vehicules;catv;80;3336;6;Velo a assistance electrique;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Electrically assisted bicycle;Clarifie : libelle ONISR peu clair
+vehicules;catv;3;3248;6;Voiturette;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Microcar;Clarifie : libelle ONISR peu clair
+vehicules;catv;43;3172;6;Trois roues motorise de plus de 125 cm3;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Three-wheeler over 125 cm3;Clarifie : libelle ONISR peu clair
+vehicules;catv;99;2414;6;Autre vehicule;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Other vehicle;
+vehicules;catv;13;2230;6;Poids lourd de 3,5 a 7,5 tonnes;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";HGV 3.5 to 7.5 t;Clarifie : libelle ONISR peu clair
+vehicules;catv;0;1576;6;Indeterminable;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Indeterminable;
+vehicules;catv;21;1486;6;Tracteur agricole;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Agricultural tractor;
+vehicules;catv;60;1259;6;EDP sans moteur;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Non-motorised personal mobility device;Clarifie : libelle ONISR peu clair
+vehicules;catv;36;1007;6;Quad lourd;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Heavy quad bike (over 50 cm3);
+vehicules;catv;38;990;6;Autocar;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Coach;
+vehicules;catv;40;713;6;Tramway;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Tram;
+vehicules;catv;20;592;6;Engin special;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Special vehicle;
+vehicules;catv;16;206;6;Tracteur routier seul;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Road tractor alone;
+vehicules;catv;39;191;6;Train;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Train;
+vehicules;catv;35;137;6;Quad leger;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Light quad bike (up to 50 cm3);
+vehicules;catv;42;137;6;Trois roues motorise de 50 a 125 cm3;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Three-wheeler 50 to 125 cm3;Clarifie : libelle ONISR peu clair
+vehicules;catv;41;97;6;Trois roues motorise jusqu'a 50 cm3;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"La notice ecrit le code sur 2 chiffres (00, 01...) ; les fichiers ecrivent 0, 1...";Three-wheeler up to 50 cm3;Clarifie : libelle ONISR peu clair
+vehicules;catv;-1;17;5;Non renseigne;CODE_A_INTERPRETER;VALIDE_REUNION;Decision reunion WP2 (cf. codes_manquants.csv);2020-2024;"-1 absent de la notice pour cette variable ; present en 2020-2024";Not specified;
+vehicules;choc;1;202416;6;Avant;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Front;Corrige : traduction ONISR erronee
+vehicules;choc;3;82962;6;Avant gauche;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Front left;
+vehicules;choc;2;67920;6;Avant droit;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Front right;Clarifie : libelle ONISR peu clair
+vehicules;choc;4;54911;6;Arriere;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Rear;
+vehicules;choc;8;38837;6;Cote gauche;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Left side;
+vehicules;choc;0;35889;6;Aucun;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;None;
+vehicules;choc;7;33181;6;Cote droit;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Right side;
+vehicules;choc;6;19696;6;Arriere gauche;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Rear left;
+vehicules;choc;5;15857;6;Arriere droit;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Rear right;
+vehicules;choc;9;7879;6;Chocs multiples;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Multiple impacts (rollover);
+vehicules;choc;-1;299;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+vehicules;manv;1;228744;6;Sans changement de direction;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;No change of direction;
+vehicules;manv;2;64289;6;Meme sens meme file;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Same direction, same lane;
+vehicules;manv;15;45097;6;Tourne a gauche;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Turning left;Clarifie : libelle ONISR peu clair
+vehicules;manv;0;35602;6;Inconnue;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Unknown;
+vehicules;manv;13;24523;6;Deport a gauche;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Swerving to the left;Clarifie : libelle ONISR peu clair
+vehicules;manv;17;18504;6;Depasse a gauche;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Overtaking on the left;Clarifie : libelle ONISR peu clair
+vehicules;manv;26;17964;6;Autres manoeuvres;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Other manoeuvre;
+vehicules;manv;9;16762;6;Insertion;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Merging;Corrige : traduction ONISR erronee
+vehicules;manv;16;14777;6;Tourne a droite;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Turning right;Clarifie : libelle ONISR peu clair
+vehicules;manv;19;13894;6;Traverse la chaussee;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Crossing the road;
+vehicules;manv;23;13661;6;Arrete hors stationnement;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Stopped (not parked);
+vehicules;manv;14;11184;6;Deport a droite;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Swerving to the right;Clarifie : libelle ONISR peu clair
+vehicules;manv;21;8336;6;Manoeuvre d'evitement;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Evasive manoeuvre;
+vehicules;manv;5;6635;6;A contresens;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Wrong way;
+vehicules;manv;11;6547;6;Change de file a gauche;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Changing lanes to the left;Clarifie : libelle ONISR peu clair
+vehicules;manv;3;6411;6;Entre deux files;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Between two lanes;
+vehicules;manv;12;6065;6;Change de file a droite;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Changing lanes to the right;Clarifie : libelle ONISR peu clair
+vehicules;manv;10;3828;6;Demi-tour;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;U-turn on the road;Corrige : traduction ONISR erronee
+vehicules;manv;20;3236;6;Stationnement en manoeuvre;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Parking manoeuvre;
+vehicules;manv;18;2912;6;Depasse a droite;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Overtaking on the right;Clarifie : libelle ONISR peu clair
+vehicules;manv;4;2639;6;Marche arriere;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Reversing;
+vehicules;manv;24;2256;6;En stationnement avec occupants;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Parked with occupants;
+vehicules;manv;22;1730;6;Ouverture de porte;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Opening a door;
+vehicules;manv;25;1605;6;Circule sur trottoir;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Driving on the pavement;
+vehicules;manv;7;1289;6;Couloir bus meme sens;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;In bus lane, same direction;
+vehicules;manv;6;934;6;Franchit le terre-plein central;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Crossing the central reservation;
+vehicules;manv;8;217;6;Couloir bus sens inverse;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;In bus lane, opposite direction;
+vehicules;manv;-1;206;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+vehicules;motor;1;450811;6;Hydrocarbures;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Hydrocarbons;
+vehicules;motor;0;39625;6;Inconnue;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Unknown;
+vehicules;motor;5;30322;6;Humaine;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Human-powered;
+vehicules;motor;3;21980;6;Electrique;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Electric;
+vehicules;motor;2;11522;6;Hybride electrique;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Hybrid electric;
+vehicules;motor;6;4000;6;Autre;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Other;
+vehicules;motor;-1;1238;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+vehicules;motor;4;349;6;Hydrogene;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Hydrogen;
+vehicules;obs;0;477739;6;Sans objet;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not applicable;
+vehicules;obs;1;13214;6;Vehicule en stationnement;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Parked vehicle;
+vehicules;obs;13;9915;6;Fosse talus ou paroi rocheuse;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Ditch, embankment or rock face;
+vehicules;obs;2;8523;6;Arbre;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Tree;
+vehicules;obs;4;7842;6;Glissiere beton;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Concrete barrier;
+vehicules;obs;3;7425;6;Glissiere metallique;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Metal guardrail;
+vehicules;obs;8;6552;6;Poteau;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Pole;
+vehicules;obs;6;6428;6;Batiment mur ou pile de pont;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Building, wall or bridge pier;
+vehicules;obs;12;4550;6;Bordure de trottoir;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Kerb;
+vehicules;obs;14;4150;6;Autre obstacle fixe sur chaussee;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Other fixed obstacle on the road;
+vehicules;obs;15;3191;6;Autre obstacle sur trottoir ou accotement;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Other fixed obstacle on pavement or verge;
+vehicules;obs;9;2719;6;Mobilier urbain;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Street furniture;
+vehicules;obs;16;2425;6;Sortie de chaussee sans obstacle;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Run-off-road without obstacle;
+vehicules;obs;7;1682;6;Support de signalisation ou appel d'urgence;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Sign support or emergency call box;
+vehicules;obs;5;1045;6;Autre glissiere;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Other barrier;
+vehicules;obs;11;983;6;Ilot refuge ou borne haute;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Traffic island, refuge or high bollard;
+vehicules;obs;10;609;6;Parapet;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Parapet;
+vehicules;obs;17;607;6;Buse ou tete d'aqueduc;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Culvert or aqueduct head;
+vehicules;obs;-1;248;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+vehicules;obsm;2;391713;6;Vehicule;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Vehicle;
+vehicules;obsm;0;104313;6;Aucun;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;None;
+vehicules;obsm;1;52082;6;Pieton;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Pedestrian;
+vehicules;obsm;9;9087;6;Autre;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Other;
+vehicules;obsm;6;1352;6;Animal sauvage;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Wild animal;
+vehicules;obsm;4;555;6;Vehicule sur rail;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Rail vehicle;
+vehicules;obsm;5;470;6;Animal domestique;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Domestic animal;
+vehicules;obsm;-1;275;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+vehicules;senc;1;250918;6;Repere ou adresse croissant;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Increasing reference point or address number;Clarifie : libelle ONISR peu clair
+vehicules;senc;2;190014;6;Repere ou adresse decroissant;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Decreasing reference point or address number;Clarifie : libelle ONISR peu clair
+vehicules;senc;3;83120;6;Absence de repere;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;No reference point;
+vehicules;senc;0;34337;6;Inconnu;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Unknown;
+vehicules;senc;-1;1458;6;Non renseigne;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Not specified;
+usagers;place;1;552428;6;Conducteur : avant gauche (voiture) / conducteur (moto);CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"Position definie par le schema de la notice p.11 ; numerotation differente pour les transports en commun";Driver: front left (car) / rider (motorcycle);Traduit par le WP3 (libelles WP2 d'apres le schema de la notice)
+usagers;place;2;84155;6;Avant droit (voiture) / passager (moto);CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"Position definie par le schema de la notice p.11 ; numerotation differente pour les transports en commun";Front right (car) / passenger (motorcycle);Traduit par le WP3 (libelles WP2 d'apres le schema de la notice)
+usagers;place;3;14364;6;Arriere droit (voiture) / side-car (moto);CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"Position definie par le schema de la notice p.11 ; numerotation differente pour les transports en commun";Rear right (car) / sidecar (motorcycle);Traduit par le WP3 (libelles WP2 d'apres le schema de la notice)
+usagers;place;4;13240;6;Arriere gauche;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"Position definie par le schema de la notice p.11 ; numerotation differente pour les transports en commun";Rear left;Traduit par le WP3 (libelles WP2 d'apres le schema de la notice)
+usagers;place;5;4101;6;Arriere centre;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"Position definie par le schema de la notice p.11 ; numerotation differente pour les transports en commun";Rear centre;Traduit par le WP3 (libelles WP2 d'apres le schema de la notice)
+usagers;place;6;1028;6;Avant centre;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"Position definie par le schema de la notice p.11 ; numerotation differente pour les transports en commun";Front centre;Traduit par le WP3 (libelles WP2 d'apres le schema de la notice)
+usagers;place;7;7192;6;Rang du milieu gauche;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"Position definie par le schema de la notice p.11 ; numerotation differente pour les transports en commun";Middle row left;Traduit par le WP3 (libelles WP2 d'apres le schema de la notice)
+usagers;place;8;3331;6;Rang du milieu centre;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"Position definie par le schema de la notice p.11 ; numerotation differente pour les transports en commun";Middle row centre;Traduit par le WP3 (libelles WP2 d'apres le schema de la notice)
+usagers;place;9;7775;6;Rang du milieu droit;CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;"Position definie par le schema de la notice p.11 ; numerotation differente pour les transports en commun";Middle row right;Traduit par le WP3 (libelles WP2 d'apres le schema de la notice)
+usagers;place;10;57514;6;Pieton (non applicable);CODE_A_INTERPRETER;ONISR_DOCUMENTE;ONISR - Notice BAAC 21/10/2025;2019-2024;;Pedestrian (not applicable);Traduit par le WP3 (libelles WP2 d'apres le schema de la notice)
+usagers;place;-1;30;4;Non renseigne;CODE_A_INTERPRETER;VALIDE_REUNION;Decision reunion WP2 (cf. codes_manquants.csv);2021-2024;"-1 absent de la notice ; present en 2021-2024 ; usagers en fuite ajoutes depuis 2021 (notice p.1)";Not specified;Traduit par le WP3 (libelles WP2 d'apres le schema de la notice)
