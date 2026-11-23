@@ -1,6 +1,6 @@
 # Conventions SQL WP3
 
-Proposition pour le schéma entrepot, à valider avec l'équipe WP3.
+Validées avec l'équipe WP3
 
 ## Règles générales
 
