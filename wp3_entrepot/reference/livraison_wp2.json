@@ -1,0 +1,17 @@
+{
+  "version_wp2": "propre-v3",
+  "source": "wp2_nettoyage/documentation/contrat_interface_wp2_wp3.md, avenant v0.5, section 9.1",
+  "mis_a_jour_le": "2026-11-23",
+  "lignes": {
+    "caracteristiques": 327628,
+    "lieux": 359512,
+    "vehicules": 559847,
+    "usagers": 745158
+  },
+  "colonnes": {
+    "caracteristiques": 21,
+    "lieux": 21,
+    "vehicules": 12,
+    "usagers": 18
+  }
+}
