@@ -4,3 +4,4 @@ psycopg[binary]
 python-dotenv
 pyarrow
 pytest
+scikit-learn
