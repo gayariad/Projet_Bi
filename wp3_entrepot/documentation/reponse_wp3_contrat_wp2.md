@@ -1,12 +1,12 @@
 # Réponse du WP3 au contrat d'interface WP2 vers WP3
 
-**Version :** 0.3 (validée par le WP3 le 23/11/2026, en attente du WP2)
+**Version :** 1.0 (validée par le WP3 le 23/11/2026 et par le WP2 le 25/11/2026)
 **Date :** 23/11/2026
 **Rédigé par :** Mouad Sahraoui Doukkali, WP3 (tâche WP3-06)
 **Répond à :** `wp2_nettoyage/documentation/contrat_interface_wp2_wp3.md` v0.4 du 14/11/2026
 et son avenant propre-v3 (v0.5, section 9, en attente de validation du WP3)
 **Livraisons contrôlées :** `propre-v2` (15/11/2026, 33/33) et `propre-v3` (23/11/2026, 37/37)
-**Validation :** Abderrahmane (chef du WP3) le 23/11/2026 ; Mohamed Reda (chef du WP2) en attente
+**Validation :** Abderrahmane (chef du WP3) le 23/11/2026 ; Mohamed Reda (chef du WP2) le 25/11/2026
 
 ## En résumé
 
@@ -19,7 +19,7 @@ et son avenant propre-v3 (v0.5, section 9, en attente de validation du WP3)
   géographiques qui restent en texte (point 3).
 - Le WP3 prend **quatre décisions** de son côté, sans rien demander au WP2 : NULL conservé
   (point 4), lieu principal seul (point 5), champ `copie_doublon` (point 6), clé `fait_usager_id` (point 7).
-- Trois questions restent ouvertes, avec destinataire et date limite : voir « Questions ouvertes ».
+- Questions : Q1 et Q2 ont reçu la réponse du WP2 le 25/11 ; Q3 reste ouverte (voir « Questions ouvertes »).
 
 ## Résultat du contrôle de livraison
 
@@ -213,11 +213,11 @@ Consignes de la section 9.3 et ce que le WP3 en fait :
 
 ## Questions ouvertes
 
-| N° | Question | Destinataire | Réponse attendue le |
+| N° | Question | Destinataire | Réponse |
 |---|---|---|---|
-| Q1 | Sur propre-v3, 739 copies en trop contre 164 sur propre-v2. La hausse vient surtout de 2021-2024, où ces lignes ont pourtant des `id_usager` différents. Le WP2 confirme-t-il que ce sont des copies, et pas des personnes distinctes ? | WP2 (Mohamed Reda) | mer. 25/11/2026 |
-| Q2 | Les identifiants et `dep`, `com` restent-ils en texte dans toutes les versions jusqu'au gel ? Quand le tag `propre-v3` sera-t-il publié ? | WP2 (Mohamed Reda) | mer. 25/11/2026 |
-| Q3 | Le découpage train/test se fait-il sur `num_acc` avec une graine fixe ? | WP0 et WP5 à WP7 | jeu. 26/11/2026 |
+| Q1 | Sur propre-v3, 739 copies en trop contre 164 sur propre-v2. Le WP2 confirme-t-il que ce sont des copies ? | WP2 (Mohamed Reda) | **Répondu le 25/11.** Chiffres confirmés (1 280 lignes, 739 copies). Ce sont des doublons *suspects* : deux personnes distinctes peuvent avoir les mêmes caractéristiques. Ne jamais supprimer ces lignes sans vérification métier. `copie_doublon` reste un simple indicateur. |
+| Q2 | Les identifiants et `dep`, `com` restent-ils en texte jusqu'au gel ? Quand le tag `propre-v3` sera-t-il publié ? | WP2 (Mohamed Reda) | **Répondu le 25/11.** Oui, aucun changement de type prévu. Tag `propre-v3` à publier ; le WP2 annoncera la livraison pour le rechargement. |
+| Q3 | Le découpage train/test se fait-il sur `num_acc` avec une graine fixe ? | WP0 et WP5 à WP7 | Ouverte, attendue le jeu. 26/11/2026 |
 
 ## Points d'attention pour la suite
 
@@ -230,7 +230,7 @@ Consignes de la section 9.3 et ce que le WP3 en fait :
 
 | Rôle | Nom | Accord | Date |
 |---|---|---|---|
-| Chef du WP2 | Mohamed Reda | | |
+| Chef du WP2 | Mohamed Reda | Oui (message Discord) | 25/11/2026 |
 | Chef du WP3 | Abderrahmane | Oui (message Discord) | 23/11/2026 |
 | WP3-06 | Mouad Sahraoui Doukkali | Oui (auteur) | 23/11/2026 |
 
@@ -241,3 +241,4 @@ Consignes de la section 9.3 et ce que le WP3 en fait :
 | 0.1 | 16/11/2026 | Première proposition, réponses aux 10 points de la v0.3 |
 | 0.2 | 23/11/2026 | Relecture du chef du WP3 : grain de `fait_usager`, types colonne par colonne, clé `fait_usager_id` et découpage train/test, liste des 5 indicateurs, questions ouvertes. Alignement sur `CONVENTIONS_SQL.md` (NULL conservé, noms BAAC). Position sur l'avenant propre-v3. Volumes du contrôle lus dans un fichier de référence |
 | 0.3 | 23/11/2026 | Accord du chef du WP3. Précision sur `dim_usager` (point 7) |
+| 1.0 | 25/11/2026 | Accord du chef du WP2. Réponses du WP2 à Q1 et Q2 |
